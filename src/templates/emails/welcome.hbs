@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Code Biruni | mern-setup-system</title>
+    <style>
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+        line-height: 1.6;
+        color: #e0e0e0;
+        margin: 0;
+        padding: 0;
+        background-color: #0a0a0c;
+      }
+      .container {
+        max-width: 600px;
+        margin: 40px auto;
+        background-color: #121214;
+        border: 1px solid #2d2d30;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      }
+      .header {
+        background: linear-gradient(135deg, #4f46e5 0%, #10b981 100%);
+        padding: 50px 20px;
+        text-align: center;
+        color: white;
+      }
+      .logo {
+        font-size: 30px;
+        font-weight: 800;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+      }
+      .welcome-text {
+        font-size: 20px;
+        opacity: 0.9;
+        font-weight: 500;
+      }
+      .content {
+        padding: 40px 30px;
+      }
+      .features {
+        margin: 35px 0;
+      }
+      .feature-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 25px;
+      }
+      .feature-icon {
+        background-color: rgba(79, 70, 229, 0.2);
+        color: #818cf8;
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 18px;
+        flex-shrink: 0;
+        font-size: 20px;
+      }
+      .feature-text strong {
+        display: block;
+        color: #ffffff;
+        font-size: 16px;
+        margin-bottom: 4px;
+      }
+      .feature-text p {
+        margin: 0;
+        font-size: 14px;
+        color: #a1a1aa;
+      }
+      .package-info {
+        background-color: #1c1c1f;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 25px 0;
+        text-align: center;
+        border: 1px solid #2d2d30;
+      }
+      .package-info strong {
+        color: #10b981;
+      }
+      .footer {
+        background-color: #0a0a0c;
+        padding: 30px;
+        text-align: center;
+        font-size: 12px;
+        color: #666;
+        border-top: 1px solid #2d2d30;
+      }
+      .support-link {
+        color: #06b6d4;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .dev-credit {
+        margin-top: 12px;
+        color: #4f46e5;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
+      @media (max-width: 600px) {
+        .content { padding: 30px 20px; }
+        .header { padding: 40px 15px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="logo">CODE BIRUNI</div>
+        <div class="welcome-text">Welcome to the Ecosystem!</div>
+      </div>
+
+      <div class="content">
+        <h2 style="color: #ffffff; margin-top: 0;">Hi {{userName}},</h2>
+        <p>Welcome to <strong>Code Biruni</strong>! We are thrilled to have you join our community of developers and innovators.</p>
+
+        <p>Your account has been successfully verified. You now have full access to our resources designed to streamline your development workflow using the <strong>mern-setup-system</strong>.</p>
+
+        <div class="package-info">
+          <strong>Environment Status:</strong> Active<br>
+          <strong>CLI Tool:</strong> mern-setup-system v{{version}}<br>
+          <strong>Author:</strong> Robius Sani
+        </div>
+
+        <div class="features">
+          <h3 style="color: #ffffff; border-bottom: 1px solid #2d2d30; padding-bottom: 10px;">What's Next?</h3>
+
+          <div class="feature-item">
+            <div class="feature-icon">🚀</div>
+            <div class="feature-text">
+              <strong>Rapid Scaffolding</strong>
+              <p>Generate clean, professional MERN stack structures in seconds using our CLI tools.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">🛠️</div>
+            <div class="feature-text">
+              <strong>Pre-built Utilities</strong>
+              <p>Access a library of production-ready middlewares, global error handlers, and async wrappers.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">🔒</div>
+            <div class="feature-text">
+              <strong>Secure Architecture</strong>
+              <p>Benefit from a system designed with security best practices and type-safe validation.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">📢</div>
+            <div class="feature-text">
+              <strong>Stay Updated</strong>
+              <p>Receive immediate notifications about new features, updates, and community modules.</p>
+            </div>
+          </div>
+        </div>
+
+        <p>If you have any questions or need a hand getting started, our documentation and support team are always ready to help.</p>
+
+        <p>Happy Coding!<br /><strong>Code Biruni Team</strong></p>
+      </div>
+
+      <div class="footer">
+        <p>© <span id="currentYear"></span> <strong>Code Biruni</strong>. All rights reserved.</p>
+        <p>This is an automated welcome message from <strong>mern-setup-system</strong>.</p>
+        <div class="dev-credit">Architected by Robius Sani</div>
+        <p style="margin-top: 15px;">Need Help? 
+          <a href="mailto:hafazrobiussani@gmail.com" class="support-link">hafazrobiussani@gmail.com</a></p>
+        <p>Empowering developers through clean architecture.</p>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

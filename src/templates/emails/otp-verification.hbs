@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OTP Verification | mern-setup-system</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #0a0a0c;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        color: #e0e0e0;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 40px auto;
+        background-color: #121214;
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid #2d2d30;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      }
+
+      /* Header */
+      .header {
+        background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
+        padding: 40px 24px;
+        text-align: center;
+        color: #ffffff;
+      }
+
+      .logo {
+        font-size: 28px;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+        margin-bottom: 4px;
+        text-transform: uppercase;
+      }
+
+      .header-subtitle {
+        font-size: 13px;
+        opacity: 0.9;
+        letter-spacing: 1px;
+        font-weight: 500;
+      }
+
+      /* Content */
+      .content {
+        padding: 40px;
+      }
+
+      h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+        color: #ffffff;
+      }
+
+      p {
+        font-size: 15px;
+        margin-bottom: 18px;
+        color: #b0b0b0;
+      }
+
+      /* OTP Box */
+      .otp-box {
+        background-color: #1c1c1f;
+        border: 1px solid #3f3f46;
+        border-radius: 12px;
+        padding: 32px;
+        text-align: center;
+        margin: 30px 0;
+      }
+
+      .otp-label {
+        font-size: 13px;
+        color: #a1a1aa;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 12px;
+      }
+
+      .otp-code {
+        font-size: 48px;
+        font-weight: 800;
+        letter-spacing: 8px;
+        color: #06b6d4;
+        font-family: 'Monaco', 'Courier New', monospace;
+        margin: 15px 0;
+        text-shadow: 0 0 20px rgba(6, 182, 212, 0.2);
+      }
+
+      .otp-expiry {
+        font-size: 12px;
+        color: #71717a;
+        margin-top: 10px;
+      }
+
+      /* Action Button */
+      .button-wrapper {
+        text-align: center;
+        margin: 35px 0;
+      }
+
+      .button {
+        display: inline-block;
+        background: #4f46e5;
+        color: #ffffff !important;
+        padding: 16px 40px;
+        text-decoration: none;
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: 700;
+        transition: all 0.3s ease;
+      }
+
+      /* Security Notice */
+      .security-note {
+        background-color: rgba(239, 68, 68, 0.1);
+        border-left: 4px solid #ef4444;
+        padding: 16px;
+        border-radius: 4px;
+        font-size: 13px;
+        color: #f87171;
+        margin: 25px 0;
+      }
+
+      /* Footer */
+      .footer {
+        background-color: #0a0a0c;
+        border-top: 1px solid #2d2d30;
+        padding: 30px;
+        text-align: center;
+        font-size: 12px;
+        color: #666;
+      }
+
+      .footer a {
+        color: #06b6d4;
+        text-decoration: none;
+      }
+
+      .dev-credit {
+        margin-top: 10px;
+        color: #4f46e5;
+        font-weight: 600;
+      }
+
+      @media (max-width: 600px) {
+        .content { padding: 30px 20px; }
+        .otp-code { font-size: 38px; letter-spacing: 6px; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="logo">CODE BIRUNI</div>
+        <div class="header-subtitle">mern-setup-system v{{version}}</div>
+      </div>
+
+      <div class="content">
+        <h2>Verify Your Account</h2>
+
+        <p>
+          Hello {{userName}},<br><br>
+          To complete your registration on our platform and finalize the account setup, please use the following one-time password (OTP).
+        </p>
+
+        <div class="otp-box">
+          <div class="otp-label">Verification Code</div>
+          <div class="otp-code">{{otp}}</div>
+          <div class="otp-expiry">
+            ⏱ Valid for 10 minutes only
+          </div>
+        </div>
+
+        <div class="security-note">
+          <strong>Security Warning:</strong> 
+          Do not share this code with anyone. Our support team will never ask for your verification code.
+        </div>
+
+        <div class="button-wrapper">
+          <a href="{{verificationUrl}}" class="button">
+            Go to Verification Page
+          </a>
+        </div>
+
+        <p style="font-size: 13px; text-align: center;">
+          If you did not initiate this request, please contact our support immediately or ignore this email.
+        </p>
+      </div>
+
+      <div class="footer">
+        <p>© {{currentYear}} <strong>Code Biruni</strong>. All rights reserved.</p>
+        <p>This is an automated security message from <strong>mern-setup-system</strong>.</p>
+        <div class="dev-credit">Architected by Robius Sani</div>
+        <p style="margin-top: 15px;">
+          Support: <a href="mailto:hafazrobiussani@gmail.com">hafazrobiussani@gmail.com</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

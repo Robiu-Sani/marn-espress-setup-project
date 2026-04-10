@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Security Alert | Code Biruni</title>
+    <style>
+      body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #e0e0e0; margin: 0; padding: 0; background-color: #0a0a0c; }
+      .container { max-width: 600px; margin: 40px auto; background-color: #121214; border: 1px solid #2d2d30; border-radius: 12px; overflow: hidden; }
+      .header { background: #ef4444; padding: 30px 20px; text-align: center; color: white; }
+      .content { padding: 40px 30px; }
+      .device-info { background-color: #1c1c1f; padding: 20px; border-radius: 8px; margin: 25px 0; border: 1px solid #3f3f46; font-size: 14px; }
+      .device-info div { margin-bottom: 8px; color: #b0b0b0; }
+      .device-info strong { color: #ffffff; }
+      .btn-danger { display: inline-block; padding: 12px 25px; background: #ef4444; color: white !important; text-decoration: none; border-radius: 6px; font-weight: bold; margin-top: 20px; }
+      .footer { background-color: #0a0a0c; padding: 25px; text-align: center; font-size: 12px; color: #666; border-top: 1px solid #2d2d30; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1 style="margin:0; font-size: 20px; letter-spacing: 1px;">NEW LOGIN DETECTED</h1>
+      </div>
+      <div class="content">
+        <h2 style="color: #ffffff;">Hi {{userName}},</h2>
+        <p>Your <strong>Code Biruni</strong> account was just logged into from a new device or browser.</p>
+        
+        <div class="device-info">
+          <div><strong>Device:</strong> {{deviceType}}</div>
+          <div><strong>Browser:</strong> {{browserName}}</div>
+          <div><strong>Location:</strong> {{location}}</div>
+          <div><strong>IP Address:</strong> {{ipAddress}}</div>
+          <div><strong>Time:</strong> {{loginTime}}</div>
+        </div>
+
+        <p>If this was you, you can safely ignore this email. If you don't recognize this activity, please secure your account immediately.</p>
+        
+        <div style="text-align: center;">
+          <a href="{{secureAccountUrl}}" class="btn-danger">Secure My Account</a>
+        </div>
+      </div>
+      <div class="footer">
+        <p>© {{currentYear}} Code Biruni | mern-setup-system</p>
+        <p>Setup by <strong>Robius Sani</strong></p>
+      </div>
+    </div>
+  </body>
+</html>
