@@ -544,117 +544,96 @@ node -e "console.log(require('crypto').randomBytes(64).toString('hex'))"`
 
 ## 10. Simple .env Setup Notes (Plain Text)
 
-===========================================
-QUICK START
-===========================================
+###### QUICK START
 
 1. cd project-name
 2. code .
 3. cp .env.example .env
 
-===========================================
-BASIC SETUP
-===========================================
+###### BASIC SETUP
 
-PORT=5000
-NODE_ENV=development
-FRONTEND_URL=http://localhost:3000
+`PORT=5000`
+`NODE_ENV=development`
+`FRONTEND_URL=http://localhost:3000`
 
-===========================================
-MONGODB ATLAS SETUP (CLOUD)
-===========================================
+###### MONGODB ATLAS SETUP (CLOUD)
 
-Step 1: Go to mongodb.com/atlas
-Step 2: Sign up with Google account
-Step 3: Create free cluster (M0)
-Step 4: Go to Database Access -> Add user (username/password)
-Step 5: Go to Network Access -> Add IP 0.0.0.0/0
-Step 6: Click Connect -> Drivers -> Copy connection string
+- Step 1: Go to mongodb.com/atlas
+- Step 2: Sign up with Google account
+- Step 3: Create free cluster (M0)
+- Step 4: Go to Database Access -> Add user (username/password)
+- Step 5: Go to Network Access -> Add IP 0.0.0.0/0
+- Step 6: Click Connect -> Drivers -> Copy connection string
 
-DB_URL=mongodb+srv://username:password@cluster.mongodb.net/database_name
+`DB_URL=mongodb+srv://username:password@cluster.mongodb.net/database_name`
 
-===========================================
-MONGODB LOCAL SETUP
-===========================================
+###### MONGODB LOCAL SETUP
 
-Windows: Download from mongodb.com
-macOS: brew install mongodb-community
-Linux: sudo apt-get install mongodb-org
+- Windows: Download from mongodb.com
+- macOS: brew install mongodb-community
+- Linux: sudo apt-get install mongodb-org
 
-DB_URL=mongodb://localhost:27017/database_name
+`DB_URL=mongodb://localhost:27017/database_name`
 
-===========================================
-GENERATE SECRET KEYS
-===========================================
+###### GENERATE SECRET KEYS
 
-Run in terminal:
-node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
+-Run in terminal:
+`node -e "console.log(require('crypto').randomBytes(64).toString('hex'))"
 
-Copy output to:
+- Copy output to:
 
-JWT_ACCESS_SECRET=pasted_key_here
-JWT_REFRESH_SECRET=pasted_key_here
-JWT_FORGET_PASSWORD_SECRET=pasted_key_here
+`JWT_ACCESS_SECRET=pasted_key_here`
+`JWT_REFRESH_SECRET=pasted_key_here`
+`JWT_FORGET_PASSWORD_SECRET=pasted_key_here`
 
-SALT_WORK_FACTOR=12
+`SALT_WORK_FACTOR=12`
 
-===========================================
-TOKEN EXPIRATION
-===========================================
+###### TOKEN EXPIRATION
 
-EXPIRE_ACCESS_TOKEN_IN=15m
-EXPIRE_REFRESH_TOKEN_IN=7d
-EXPIRE_FORGET_PASSWORD_TOKEN_IN=10m
+`EXPIRE_ACCESS_TOKEN_IN=15m`
+`EXPIRE_REFRESH_TOKEN_IN=7d`
+`EXPIRE_FORGET_PASSWORD_TOKEN_IN=10m`
 
-===========================================
-GMAIL SETUP
-===========================================
+###### GMAIL SETUP
 
-Step 1: Enable 2FA on your Google account
-Step 2: Go to myaccount.google.com/apppasswords
-Step 3: Select Mail -> Other -> Name it "Node App"
-Step 4: Copy 16-character password
+- Step 1: Enable 2FA on your Google account
+- Step 2: Go to myaccount.google.com/apppasswords
+- Step 3: Select Mail -> Other -> Name it "Node App"
+- Step 4: Copy 16-character password
 
-USER_EMAIL=your_email@gmail.com
-EMAIL_PASSWORD=abcd efgh ijkl mnop
-STEMAIL_HOST=smtp.gmail.com
-EMAIL_PORT=587
+`USER_EMAIL=your_email@gmail.com`
+`EMAIL_PASSWORD=abcd efgh ijkl mnop`
+`STEMAIL_HOST=smtp.gmail.com`
+`EMAIL_PORT=587`
 
-===========================================
-CLOUDINARY SETUP
-===========================================
+###### CLOUDINARY SETUP
 
-Step 1: Sign up at cloudinary.com
-Step 2: Get credentials from Dashboard
+- Step 1: Sign up at cloudinary.com
+- Step 2: Get credentials from Dashboard
 
-CLOUDINARY_CLOUD_NAME=your_cloud_name
-CLOUDINARY_API_KEY=123456789012345
-CLOUDINARY_API_SECRET=abc123def456ghi789
+`CLOUDINARY_CLOUD_NAME=your_cloud_name`
+`CLOUDINARY_API_KEY=123456789012345`
+`CLOUDINARY_API_SECRET=abc123def456ghi789`
 
-===========================================
-FREEIMAGEHOST SETUP
-===========================================
+###### FREEIMAGEHOST SETUP
 
-Step 1: Sign up at freeimage.host
-Step 2: Settings -> API -> Generate API Key
+- Step 1: Sign up at freeimage.host
+- Step 2: Settings -> API -> Generate API Key
 
-FREEIMAGEHOSTAPIKEY=your_32_character_key
-FREEIMAGEHOSTURL=https://freeimage.host/api/1/upload
+`FREEIMAGEHOSTAPIKEY=your_32_character_key`
+`FREEIMAGEHOSTURL=https://freeimage.host/api/1/upload`
 
-===========================================
-GOOGLE GEMINI AI SETUP
-===========================================
+###### GOOGLE GEMINI AI SETUP
 
-Step 1: Go to makersuite.google.com/app/apikey
-Step 2: Sign in with Google
-Step 3: Click Create API Key
+- Step 1: Go to makersuite.google.com/app/apikey
+- Step 2: Sign in with Google
+- Step 3: Click Create API Key
 
-GEMINI_API_KEY=AIzaSyA...your_key_here
+`GEMINI_API_KEY=AIzaSyA...your_key_here`
 
-===========================================
-COMPLETE .env EXAMPLE
-===========================================
+###### COMPLETE .env EXAMPLE
 
+```
 PORT=5000
 NODE_ENV=development
 FRONTEND_URL=http://localhost:3000
@@ -683,30 +662,27 @@ FREEIMAGEHOSTAPIKEY=abc123def456ghi789jkl012
 FREEIMAGEHOSTURL=https://freeimage.host/api/1/upload
 
 GEMINI_API_KEY=AIzaSyAbCdEfGhIjKlMnOpQrStUvWxYz12345678
+```
 
-===========================================
-QUICK COMMANDS
-===========================================
+###### QUICK COMMANDS
 
-Generate secret key:
-node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
+- Generate secret key:
+`node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"`
 
-Test MongoDB:
-mongosh --eval "db.runCommand({ping: 1})"
+- Test MongoDB:
+`mongosh --eval "db.runCommand({ping: 1})"`
 
-Start MongoDB (macOS):
-brew services start mongodb-community
+- Start MongoDB (macOS):
+`brew services start mongodb-community`
 
-Start MongoDB (Linux):
-sudo systemctl start mongod
+- Start MongoDB (Linux):
+`sudo systemctl start mongod`
 
-===========================================
-COMMON ISSUES
-===========================================
+###### COMMON ISSUES
 
-MongoDB error -> Check IP whitelist (add 0.0.0.0/0)
-Email error -> Use App Password, not regular password
-JWT error -> Regenerate with crypto.randomBytes
-CORS error -> Check FRONTEND_URL is correct
+- MongoDB error -> Check IP whitelist (add 0.0.0.0/0)
+- Email error -> Use App Password, not regular password
+- JWT error -> Regenerate with crypto.randomBytes
+- CORS error -> Check FRONTEND_URL is correct
 
 
