@@ -1,16 +1,16 @@
 # Complete Environment Setup Documentation
 
 ## 📋 Table of Contents
-1. [Environment Configuration](#environment-configuration)
-2. [MongoDB Atlas Setup](#mongodb-atlas-setup)
-3. [Local MongoDB Setup](#local-mongodb-setup)
-4. [Email Configuration](#email-configuration)
-5. [Cloudinary Setup](#cloudinary-setup)
-6. [FreeImageHost Setup](#freeimagehost-setup)
-7. [Google Gemini AI Setup](#google-gemini-ai-setup)
-8. [Complete .env File Example](#complete-env-file-example)
-9. [Environment Validation Script](#Environment-Validation-Script)
-10. [Simple .env Setup Notes (Plain Text)](#Simple-.env-Setup-Notes (Plain Text))
+1. Environment Configuration
+2. MongoDB Atlas Setup
+3. Local MongoDB Setup
+4. Email Configuration
+5. Cloudinary Setup
+6. FreeImageHost Setup
+7. Google Gemini AI Setup
+8. Complete .env File Example
+9. Environment Validation Script
+10. Simple .env Setup Notes (Plain Text)
 
 ---
 
