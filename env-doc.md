@@ -9,8 +9,8 @@
 6. [FreeImageHost Setup](#freeimagehost-setup)
 7. [Google Gemini AI Setup](#google-gemini-ai-setup)
 8. [Complete .env File Example](#complete-env-file-example)
-9. [Environment Validation Script](#Environment Validation Script)
-10. [Simple .env Setup Notes (Plain Text)](#Simple .env Setup Notes (Plain Text))
+9. [Environment Validation Script](#Environment-Validation-Script)
+10. [Simple .env Setup Notes (Plain Text)](#Simple-.env-Setup-Notes (Plain Text))
 
 ---
 
@@ -675,8 +675,8 @@ GEMINI_API_KEY=AIzaSyAbCdEfGhIjKlMnOpQrStUvWxYz12345678
 - Start MongoDB (macOS):
 `brew services start mongodb-community`
 
-- Start MongoDB (Linux):
-`sudo systemctl start mongod`
+- Start MongoDB (Linux):<br/>
+  `sudo systemctl start mongod`
 
 ###### COMMON ISSUES
 
