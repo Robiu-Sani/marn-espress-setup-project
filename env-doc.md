@@ -552,9 +552,9 @@ node -e "console.log(require('crypto').randomBytes(64).toString('hex'))"`
 
 ###### BASIC SETUP
 
-`PORT=5000`
-`NODE_ENV=development`
-`FRONTEND_URL=http://localhost:3000`
+`PORT=5000`<br/>
+`NODE_ENV=development`<br/>
+`FRONTEND_URL=http://localhost:3000`<br/>
 
 ###### MONGODB ATLAS SETUP (CLOUD)
 
@@ -564,35 +564,35 @@ node -e "console.log(require('crypto').randomBytes(64).toString('hex'))"`
 - Step 4: Go to Database Access -> Add user (username/password)
 - Step 5: Go to Network Access -> Add IP 0.0.0.0/0
 - Step 6: Click Connect -> Drivers -> Copy connection string
-
-`DB_URL=mongodb+srv://username:password@cluster.mongodb.net/database_name`
+<br/>
+`DB_URL=mongodb+srv://username:password@cluster.mongodb.net/database_name`<br/>
 
 ###### MONGODB LOCAL SETUP
 
 - Windows: Download from mongodb.com
 - macOS: brew install mongodb-community
 - Linux: sudo apt-get install mongodb-org
-
-`DB_URL=mongodb://localhost:27017/database_name`
+<br/>
+`DB_URL=mongodb://localhost:27017/database_name`<br/>
 
 ###### GENERATE SECRET KEYS
 
--Run in terminal:
+-Run in terminal:<br/>
 `node -e "console.log(require('crypto').randomBytes(64).toString('hex'))"
 
 - Copy output to:
-
-`JWT_ACCESS_SECRET=pasted_key_here`
-`JWT_REFRESH_SECRET=pasted_key_here`
-`JWT_FORGET_PASSWORD_SECRET=pasted_key_here`
-
-`SALT_WORK_FACTOR=12`
+<br/>
+`JWT_ACCESS_SECRET=pasted_key_here`<br/>
+`JWT_REFRESH_SECRET=pasted_key_here`<br/>
+`JWT_FORGET_PASSWORD_SECRET=pasted_key_here`<br/>
+<br/>
+`SALT_WORK_FACTOR=12`<br/>
 
 ###### TOKEN EXPIRATION
 
-`EXPIRE_ACCESS_TOKEN_IN=15m`
-`EXPIRE_REFRESH_TOKEN_IN=7d`
-`EXPIRE_FORGET_PASSWORD_TOKEN_IN=10m`
+`EXPIRE_ACCESS_TOKEN_IN=15m`<br/>
+`EXPIRE_REFRESH_TOKEN_IN=7d`<br/>
+`EXPIRE_FORGET_PASSWORD_TOKEN_IN=10m`<br/>
 
 ###### GMAIL SETUP
 
@@ -600,27 +600,27 @@ node -e "console.log(require('crypto').randomBytes(64).toString('hex'))"`
 - Step 2: Go to myaccount.google.com/apppasswords
 - Step 3: Select Mail -> Other -> Name it "Node App"
 - Step 4: Copy 16-character password
-
-`USER_EMAIL=your_email@gmail.com`
-`EMAIL_PASSWORD=abcd efgh ijkl mnop`
-`STEMAIL_HOST=smtp.gmail.com`
-`EMAIL_PORT=587`
+<br/>
+`USER_EMAIL=your_email@gmail.com`<br/>
+`EMAIL_PASSWORD=abcd efgh ijkl mnop`<br/>
+`STEMAIL_HOST=smtp.gmail.com`<br/>
+`EMAIL_PORT=587`<br/>
 
 ###### CLOUDINARY SETUP
 
 - Step 1: Sign up at cloudinary.com
 - Step 2: Get credentials from Dashboard
-
-`CLOUDINARY_CLOUD_NAME=your_cloud_name`
-`CLOUDINARY_API_KEY=123456789012345`
-`CLOUDINARY_API_SECRET=abc123def456ghi789`
+<br/>
+`CLOUDINARY_CLOUD_NAME=your_cloud_name`<br/>
+`CLOUDINARY_API_KEY=123456789012345`<br/>
+`CLOUDINARY_API_SECRET=abc123def456ghi789`<br/>
 
 ###### FREEIMAGEHOST SETUP
 
 - Step 1: Sign up at freeimage.host
 - Step 2: Settings -> API -> Generate API Key
-
-`FREEIMAGEHOSTAPIKEY=your_32_character_key`
+<br/>
+`FREEIMAGEHOSTAPIKEY=your_32_character_key`<br/>
 `FREEIMAGEHOSTURL=https://freeimage.host/api/1/upload`
 
 ###### GOOGLE GEMINI AI SETUP
@@ -628,7 +628,7 @@ node -e "console.log(require('crypto').randomBytes(64).toString('hex'))"`
 - Step 1: Go to makersuite.google.com/app/apikey
 - Step 2: Sign in with Google
 - Step 3: Click Create API Key
-
+<br/>
 `GEMINI_API_KEY=AIzaSyA...your_key_here`
 
 ###### COMPLETE .env EXAMPLE
@@ -666,13 +666,13 @@ GEMINI_API_KEY=AIzaSyAbCdEfGhIjKlMnOpQrStUvWxYz12345678
 
 ###### QUICK COMMANDS
 
-- Generate secret key:
+- Generate secret key:<br/>
 `node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"`
 
-- Test MongoDB:
+- Test MongoDB:<br/>
 `mongosh --eval "db.runCommand({ping: 1})"`
 
-- Start MongoDB (macOS):
+- Start MongoDB (macOS):<br/>
 `brew services start mongodb-community`
 
 - Start MongoDB (Linux):<br/>
