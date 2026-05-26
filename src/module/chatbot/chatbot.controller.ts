@@ -3,7 +3,7 @@ import { Request, Response } from 'express';
 import catchAsync from '../../utils/catchAsync'; 
 import sendResponse from '../../utils/sendResponse';
 import httpStatus from 'http-status'; // Assuming you use a library like 'http-status'
-import { ChatBorFunctions } from './chatbot.service';
+import { ChatBotFunction } from './chatbot.service';
 
 /**
  * @description Controller function to handle chatbot requests.
@@ -25,7 +25,7 @@ export const ChatBotController = catchAsync(
     }
 
     // 2. Call the core chatbot service function
-    const chatResult = await ChatBorFunctions(prompt);
+    const chatResult = await ChatBotFunction(prompt);
 
     // 3. Determine the response status and message
     const finalSuccess = chatResult.success;

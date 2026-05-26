@@ -5,4 +5,4 @@ const router = express.Router();
 
 router.post('/',ChatBotController)
 
-export const chatbotRoute = router 
+export const chatbotRouter = router 

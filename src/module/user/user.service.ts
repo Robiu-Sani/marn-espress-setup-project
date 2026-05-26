@@ -1,12 +1,49 @@
 import { FilterQuery, Types, UpdateQuery } from 'mongoose';
 import { userInterface } from './user.interface';
 import User from './user.model';
+import { OTP } from '../auth/otp.model';
+import EmailTemplates from '../../utils/sendEmail';
 
 /**
  * Create a new user
  */
-export const createUser = async (userData: Partial<userInterface>) => {
+export const createUser = async (
+  userData: Partial<userInterface>,
+) => {
+
+  // create user
   const user = await User.create(userData);
+
+  // send otp if email exists
+  if (user.email) {
+
+    // generate 6 digit otp
+    const otp = Math.floor(
+      100000 + Math.random() * 900000,
+    ).toString();
+
+    // remove previous otp
+    await OTP.deleteMany({
+      email: user.email,
+    });
+
+    // save new otp
+    await OTP.create({
+      email: user.email,
+      otp,
+      expiresAt: new Date(
+        Date.now() + 10 * 60 * 1000,
+      ),
+    });
+
+    // send email
+    await EmailTemplates.sendOtpEmail(
+      user.email,
+      otp,
+      user.name,
+    );
+  }
+
   return user;
 };
 

@@ -34,92 +34,100 @@ const CLIENT_SIDE_PAGES = [
 
 // 2️⃣ KNOWLEDGE BASE INFORMATION (3000-5000 words paragraph)
 // Add ALL your business/project information here as plain text
-// The AI will use this to answer questions
 const KNOWLEDGE_BASE_INFO = `
 [WRITE YOUR COMPLETE INFORMATION HERE - 3000 to 5000 words]
 
 Example structure (replace with your content):
 
-COMPANY/PROJECT NAME: [Your Name Here]
-Established: [Year]
-Mission: [Your mission statement]
-Vision: [Your vision]
+COMPANY/PROJECT NAME: Your Company Name
+Established: 2024
+Mission: To provide exceptional service and value to our customers
+Vision: To become a leader in our industry through innovation and excellence
 
 ABOUT US:
-[Write detailed description about your company/project. Include history, values, achievements, team information, etc. - 500-1000 words]
+We are a leading provider of innovative solutions dedicated to helping businesses grow and succeed. 
+Founded in 2024, our company has quickly established itself as a trusted partner for organizations 
+of all sizes. Our team consists of experienced professionals who are passionate about delivering 
+exceptional results. We believe in building long-term relationships with our clients based on 
+trust, transparency, and mutual success.
+
+Our values include integrity, innovation, customer focus, and continuous improvement. 
+We strive to exceed expectations in everything we do, from initial consultation to ongoing support.
 
 SERVICES/PRODUCTS:
-[List all services or products with detailed descriptions]
-Service 1: [Description, features, benefits, pricing]
-Service 2: [Description, features, benefits, pricing]
-[Add all services/products - 500-1000 words]
+Service 1 - Web Development: Custom website development using modern technologies. 
+Features responsive design, SEO optimization, and fast loading times. 
+Benefits include increased online presence and better customer engagement.
+
+Service 2 - Mobile Apps: Native and cross-platform mobile application development. 
+Available for iOS and Android platforms. Benefits include reaching customers on mobile devices.
+
+Service 3 - Digital Marketing: Comprehensive marketing strategies including SEO, social media, 
+and email marketing. Benefits include increased brand awareness and lead generation.
 
 HOW IT WORKS:
-[Step by step process of how your service/product works]
-Step 1: [Description]
-Step 2: [Description]
-[Add all steps - 300-500 words]
+Step 1: Initial Consultation - We discuss your needs and goals
+Step 2: Planning & Strategy - We create a customized plan
+Step 3: Development & Implementation - We build your solution
+Step 4: Testing & Quality Assurance - We ensure everything works perfectly
+Step 5: Launch & Deployment - We go live with your project
+Step 6: Ongoing Support - We provide continuous maintenance and updates
 
 FEATURES & BENEFITS:
-[List all key features and their benefits]
-Feature 1: [Benefit to customer]
-Feature 2: [Benefit to customer]
-[Add all features - 300-500 words]
+Feature 1: 24/7 Customer Support - Get help whenever you need it
+Feature 2: Money-back Guarantee - Risk-free satisfaction guarantee
+Feature 3: Fast Turnaround - Quick delivery without compromising quality
+Feature 4: Competitive Pricing - Affordable solutions for every budget
 
 PRICING & PLANS:
-[Describe all pricing plans, packages, offers]
-Plan 1: [Price, features, duration]
-Plan 2: [Price, features, duration]
-[Add all pricing details - 200-300 words]
+Basic Plan: $99/month - Includes essential features and email support
+Professional Plan: $299/month - Includes advanced features and priority support
+Enterprise Plan: Custom pricing - Includes all features and dedicated support team
 
 FAQ:
-Question 1: [Answer]
-Question 2: [Answer]
-[Add 10-20 common questions and answers - 500-1000 words]
+Q: How long does implementation take?
+A: Implementation typically takes 2-4 weeks depending on project complexity.
+
+Q: Do you offer customer support?
+A: Yes, we provide 24/7 customer support via email, phone, and live chat.
+
+Q: Is there a contract commitment?
+A: No, our plans are month-to-month with no long-term contracts.
 
 POLICIES:
-Return Policy: [Details]
-Shipping Policy: [Details]
-Privacy Policy: [Key points]
-Terms of Service: [Key points]
-[Add all policies - 300-500 words]
+Return Policy: Full refund within 30 days if not satisfied
+Privacy Policy: We never share your personal information with third parties
+Terms of Service: Standard terms apply for all services
 
 ACHIEVEMENTS:
-[Achievement 1: Description]
-[Achievement 2: Description]
-[Add achievements - 200-300 words]
+Achievement 1: Served 1000+ happy customers
+Achievement 2: 98% customer satisfaction rate
+Achievement 3: Industry award for innovation in 2024
 
 TESTIMONIALS:
-[Customer 1: "Testimonial text"]
-[Customer 2: "Testimonial text"]
-[Add testimonials - 200-300 words]
+"Excellent service! Highly recommended." - John Doe
+"The team went above and beyond our expectations." - Jane Smith
 
 SUPPORT INFORMATION:
-Support Hours: [Days and times]
-Response Time: [Within X hours/days]
-Supported Languages: [Languages available]
-[Add support details - 100-200 words]
+Support Hours: Monday-Friday, 9 AM - 6 PM EST
+Response Time: Within 24 hours
+Supported Languages: English, Spanish, French
 
 TROUBLESHOOTING:
-Common Issue 1: [Solution]
-Common Issue 2: [Solution]
-[Add troubleshooting - 200-300 words]
+Common Issue 1: Can't access dashboard - Clear browser cache and cookies
+Common Issue 2: Billing problems - Contact support with your invoice number
 
 INTEGRATIONS:
-[Integration 1: Description]
-[Integration 2: Description]
-[Add integrations - 100-200 words]
+Integration 1: PayPal - Secure payment processing
+Integration 2: Stripe - Credit card payments
+Integration 3: Mailchimp - Email marketing automation
 
 UPDATES & ROADMAP:
-Recent Updates: [List latest updates]
-Future Plans: [Upcoming features]
-[Add roadmap - 100-200 words]
-
-[Continue adding any other relevant information up to 5000 words]
+Recent Updates: Mobile app launched, New dashboard features added
+Future Plans: AI-powered analytics, API access for developers
 `;
 
 // 3️⃣ CONTACT METHODS
-// Add all your contact information here
 const CONTACT_METHODS = {
   email: "support@yourcompany.com",
   phone: "+1234567890",
@@ -130,17 +138,17 @@ const CONTACT_METHODS = {
   twitter: "https://twitter.com/yourpage",
   linkedin: "https://linkedin.com/company/yourpage",
   youtube: "https://youtube.com/yourchannel",
-  address: "Your full address here",
+  address: "123 Business Street, City, Country",
   supportHours: "Monday-Friday, 9 AM - 6 PM",
 };
 
 // 4️⃣ AI RESPONSE CONFIGURATION
 const RESPONSE_CONFIG = {
-  maxWords: 40,           // Maximum words in response
-  minWords: 10,           // Minimum words in response
-  responseStyle: "conversational", // conversational, professional, friendly
-  includeLinks: true,     // Include page links in responses
-  includeContact: true,   // Include contact info when relevant
+  maxWords: 40,
+  minWords: 10,
+  responseStyle: "conversational",
+  includeLinks: true,
+  includeContact: true,
 };
 
 // ============================================
@@ -157,6 +165,9 @@ interface ChatResponse {
   suggestedPages: { name: string; path: string; }[];
   contactInfo?: any;
   responseTime?: number;
+  language: string;
+  sources: string[];
+  sourceCount: number;
 }
 
 interface PageMatch {
@@ -188,12 +199,10 @@ const findRelevantPages = (query: string): PageMatch[] => {
     const pageNameLower = page.name.toLowerCase();
     const pagePathLower = page.path.toLowerCase();
     
-    // Check if query contains page name
     if (queryLower.includes(pageNameLower)) {
       relevanceScore += 0.8;
     }
     
-    // Check individual words
     const queryWords = queryLower.split(' ');
     for (const word of queryWords) {
       if (pageNameLower.includes(word) && word.length > 2) {
@@ -204,7 +213,6 @@ const findRelevantPages = (query: string): PageMatch[] => {
       }
     }
     
-    // Check for synonyms/common variations
     const synonyms: { [key: string]: string[] } = {
       'contact': ['reach', 'call', 'email', 'phone', 'support'],
       'about': ['company', 'us', 'team', 'story'],
@@ -256,7 +264,7 @@ const formatContactInfo = (): string => {
   return availableMethods.join('\n');
 };
 
-// Generate AI response (10-40 words, conversational)
+// Generate AI response
 const generateAIResponse = async (
   prompt: string, 
   language: string, 
@@ -265,10 +273,8 @@ const generateAIResponse = async (
   
   const suggestedPages = relevantPages.map(match => match.page);
   
-  // Prepare contact info for AI
   const contactInfoText = RESPONSE_CONFIG.includeContact ? formatContactInfo() : '';
   
-  // Prepare page suggestions text
   const pagesText = relevantPages.map(p => 
     `- ${p.page.name}: ${p.page.path}`
   ).join('\n');
@@ -314,10 +320,8 @@ YOUR RESPONSE (${RESPONSE_CONFIG.minWords}-${RESPONSE_CONFIG.maxWords} words in 
     
     let finalResponse = response.text || generateFallbackResponse(language, prompt);
     
-    // Clean up response - ensure it's conversational and proper length
     finalResponse = finalResponse.trim();
     
-    // Add page links if enabled
     if (RESPONSE_CONFIG.includeLinks && relevantPages.length > 0) {
       const topPage = relevantPages[0].page;
       if (!finalResponse.includes(topPage.name.toLowerCase())) {
@@ -367,22 +371,30 @@ export const ChatBotFunction = async (prompt: string): Promise<ChatResponse> => 
           "Please ask me something! I'm here to help.",
         foundResults: false,
         suggestedPages: [],
-        responseTime: 0
+        responseTime: 0,
+        language: 'english',
+        sources: [],
+        sourceCount: 0,
       };
     }
     
     const language = detectLanguage(prompt);
     const relevantPages = findRelevantPages(prompt);
+    const sourcesList = relevantPages.map(p => p.page.name);
+    
     const { response, suggestedPages } = await generateAIResponse(prompt, language, relevantPages);
     const responseTime = Date.now() - startTime;
     
     return {
       success: true,
       response: response,
-      foundResults: true,
+      foundResults: relevantPages.length > 0,
       suggestedPages: suggestedPages,
       contactInfo: RESPONSE_CONFIG.includeContact ? CONTACT_METHODS : undefined,
-      responseTime: responseTime
+      responseTime: responseTime,
+      language: language,
+      sources: sourcesList,
+      sourceCount: sourcesList.length,
     };
     
   } catch (error) {
@@ -394,6 +406,8 @@ export const ChatBotFunction = async (prompt: string): Promise<ChatResponse> => 
       english: `Sorry, I'm having trouble right now. Please reach out to ${CONTACT_METHODS.email || CONTACT_METHODS.phone || 'our support team'} for immediate help.`,
       bangla: `দুঃখিত, আমার এখন সমস্যা হচ্ছে। দয়া করে ${CONTACT_METHODS.email || CONTACT_METHODS.phone || 'আমাদের সাপোর্ট টিম'} এ যোগাযোগ করুন।`,
       arabic: `عذراً، أواجه مشكلة الآن. يرجى التواصل مع ${CONTACT_METHODS.email || CONTACT_METHODS.phone || 'فريق الدعم'} للحصول على مساعدة فورية.`,
+      hindi: `क्षमा करें, मुझे अभी समस्या हो रही है। कृपया तुरंत सहायता के लिए ${CONTACT_METHODS.email || CONTACT_METHODS.phone || 'हमारी सपोर्ट टीम'} से संपर्क करें।`,
+      urdu: `معذرت، مجھے ابھی مسئلہ ہو رہا ہے۔ براہ کرم فوری مدد کے لیے ${CONTACT_METHODS.email || CONTACT_METHODS.phone || 'ہماری سپورٹ ٹیم'} سے رابطہ کریں۔`
     };
     
     return {
@@ -401,7 +415,10 @@ export const ChatBotFunction = async (prompt: string): Promise<ChatResponse> => 
       response: errorResponses[language] || errorResponses.english,
       foundResults: false,
       suggestedPages: [],
-      responseTime: responseTime
+      responseTime: responseTime,
+      language: language,
+      sources: [],
+      sourceCount: 0,
     };
   }
 };
@@ -423,9 +440,7 @@ export const getPageSuggestions = (query: string): { name: string; path: string;
 
 // Update knowledge base dynamically
 export const updateKnowledgeBase = (newInfo: string): void => {
-  // This is a placeholder - in real implementation, you'd update your database
   console.log("Knowledge base update requested:", newInfo.substring(0, 100));
-  // (KNOWLEDGE_BASE_INFO as any) = newInfo; // Only works if using let instead of const
 };
 
 // Get current configuration

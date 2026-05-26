@@ -1,5 +1,7 @@
 import express from 'express';
 import { AuthRouter } from '../../module/auth/auth.router';
+import { user_router } from '../../module/user/user.route';
+import { chatbotRouter } from '../../module/chatbot/chatbot.router';
 
 const routerV1 = express.Router();
 
@@ -7,13 +9,18 @@ const routerV1 = express.Router();
 const moduleRoutes = [
   {
     path: '/auth',
+    route: chatbotRouter,
+  },
+  {
+    path: '/auth',
     route: AuthRouter,
   },
+  {
+    path: '/user',
+    route: user_router,
+  },
   /* Add more modules here as your project grows:
-    {
-      path: '/users',
-      route: UserRouter,
-    },
+
   */
 ];
 
